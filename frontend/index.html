@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Parser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📄 Bill Parser</h1>
+            <p>Upload your bills and let AI extract the important details</p>
+        </div>
+
+        <div class="main-content">
+            <div class="card upload-section">
+                <h2>Upload Bill</h2>
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📁</div>
+                    <div class="upload-text">Drop your bill here or click to browse</div>
+                    <div class="upload-subtext">Supports PDF, JPG, PNG files</div>
+                </div>
+                <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png">
+                <button class="btn" onclick="document.getElementById('fileInput').click()">
+                    Choose File
+                </button>
+                <button class="btn" id="uploadBtn" onclick="uploadFile()" disabled>
+                    Upload & Process
+                </button>
+
+                <div class="processing-status" id="processingStatus"></div>
+            </div>
+
+            <div class="card bills-section">
+                <h2>Recent Bills</h2>
+                <div id="billsList">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📋</div>
+                        <p>No bills uploaded yet</p>
+                        <p style="font-size: 0.9em; margin-top: 5px;">Upload your first bill to get started</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="totalBills">0</div>
+                <div class="stat-label">Total Bills</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalAmount">$0.00</div>
+                <div class="stat-label">Total Amount</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="thisMonth">0</div>
+                <div class="stat-label">This Month</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
