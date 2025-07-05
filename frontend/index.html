@@ -21,13 +21,22 @@
                     <div class="upload-text">Drop your bill here or click to browse</div>
                     <div class="upload-subtext">Supports PDF, JPG, PNG files</div>
                 </div>
-                <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png">
-                <button class="btn" onclick="document.getElementById('fileInput').click()">
-                    Choose File
-                </button>
-                <button class="btn" id="uploadBtn" onclick="uploadFile()" disabled>
-                    Upload & Process
-                </button>
+                <input type="file" id="fileInput" accept=".pdf">
+
+                <div class="upload-controls">
+                    <button class="btn" onclick="document.getElementById('fileInput').click()">
+                        Choose File
+                    </button>
+                    <select id="billType" required>
+                        <option value="">Select bill type...</option>
+                        <option value="water">Water Utility</option>
+                        <option value="internet">Internet</option>
+                        <option value="mobile">Mobile Phone</option>
+                    </select>
+                    <button class="btn" id="uploadBtn" onclick="uploadFile()" disabled>
+                        Upload & Process
+                    </button>
+                </div>
 
                 <div class="processing-status" id="processingStatus"></div>
             </div>

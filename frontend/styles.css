@@ -92,6 +92,51 @@ body {
     font-size: 0.9em;
 }
 
+.upload-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+}
+
+.upload-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+}
+
+.upload-controls > * {
+    flex: 1;
+    max-width: 200px;
+    min-width: 150px;
+    width: 180px; /* Add this to force exact width */
+}
+
+.upload-controls select {
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 1em;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-controls select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.upload-controls select:hover {
+    border-color: #764ba2;
+}
+
 #fileInput {
     display: none;
 }
