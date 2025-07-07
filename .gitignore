@@ -3,3 +3,4 @@ billserver/billserver/__pycache__/
 billserver/parsers/__pycache__/
 .idea
 billserver/db.sqlite3
+tests/resources/
